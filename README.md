@@ -23,7 +23,7 @@
 
 * 프로젝트를 하나 생성하고, IDE에서 원격 저장소를 연결합니다
     * ```git init``` // 원격 저장소 init
-    * ```git remove -v https://github.com/ssssujini99/software-engineering2.git``` // 원격 저장소 연결
+    * ```git remote -v https://github.com/ssssujini99/software-engineering2.git``` // 원격 저장소 연결
     * ```git pull origin master``` // 원격 master 브랜치로부터 최신 내용을 업데이트합니다
     * 그리고 받은 내용을 실행해서 테스트합니다
     (본인 로컬 환경에서 cpp 파일이 잘 작동하나 확인해주세요)   
