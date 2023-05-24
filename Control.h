@@ -2,15 +2,26 @@
 #include <iostream>
 #include "CompanyMember.h"
 
-// 채용 정보 등록 control 클래스
 class AddRecruitment
 {
 public:
-    Recruitment * Create_Recruitment(CompanyMember *X, char a[], int b, char c[]);
+	Recruitment* Create_Recruitment(CompanyMember* X, char a[], int b, char c[]);
 };
 
 class SearchRecruitment
 {
 public:
-    void Search_Recruitments();
+	vector<Recruitment*> Search_Recruitments(CompanyMember* mem);
 };
+
+//채용정보검색 control클래스
+class SearchRecruitmentInfo
+{
+	SearchRecruitmentInfoUI* SearchRecruitmentInfoUIPtr;
+	CompanyMember* companyMemberPtr;
+	Recruitment* printRecruitmentPtr;
+
+public:
+	Recruitment* showRecruitmentList(string companyName);
+};
+
