@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
-#include <string>>
+
 
 #include "Boundary.h"
 
@@ -16,12 +16,13 @@
 void DoTask();
 void Program_Exit();
 
-// 변수 선언
+// 변수 선언    
 FILE* in_fp, * out_fp;
-// 유저 객체 포인터 배열 저장 
-CompanyMember* companyMembers[Max_User];
+
+// 유저 객체 포인터 벡터 저장 
+vector<CompanyMember*> companyLists;
 CompanyMember* currentMember;
-int num = 0;
+
 
 int main()
 {
@@ -70,11 +71,11 @@ void DoTask()
                     fscanf(in_fp, "%s %s %s %s", name, number, ID, password);
 
                     CompanyMember* newMember = new CompanyMember(name, number, ID, password);
-                    companyMembers[num] = newMember;
+                    companyLists.push_back(newMember);
 
                     fprintf(out_fp, "1.1. 회원가입\n");
-                    fprintf(out_fp, "> %s %s %s %s\n",companyMembers[num]->getCompanyName(), companyMembers[num]->getBusinessNum(),companyMembers[num]->getID(), companyMembers[num]->getPassword());
-                    num++;
+                    fprintf(out_fp, "> %s %s %s %s\n",newMember->getCompanyName(), newMember->getBusinessNum(),newMember->getID(), newMember->getPassword());
+
                 }
                 else
                 {
@@ -98,13 +99,13 @@ void DoTask()
                     char ID[MAX_STRING], password[MAX_STRING];
                     fscanf(in_fp, "%s %s", ID, password);
 
-                    for (int i = 0; i <= num; i++)
+                    for (int i = 0; i < companyLists.size(); i++)
                     {
-                        if (strcmp(companyMembers[i]->getID(), ID) == 0)
+                        if (strcmp(companyLists[i]->getID(), ID) == 0)
                         {
-                            if (strcmp(companyMembers[i]->getPassword(), password) == 0)
+                            if (strcmp(companyLists[i]->getPassword(), password) == 0)
                             {
-                                currentMember = companyMembers[i];
+                                currentMember = companyLists[i];
 
                                 fprintf(out_fp, "2.1. 로그인\n");
                                 fprintf(out_fp, "> %s %s\n", currentMember->getID(), currentMember->getPassword());
@@ -144,8 +145,10 @@ void DoTask()
 
                 // 3.2 등록된 채용 정보 조회
             case 2:
+                
                 SearchRecruitmentUI _search_RecruitmentUI;
-                -SearchRecruitmentUI.
+                _search_RecruitmentUI.Search_Recruitments(out_fp, currentMember);
+                
                 break;
             }
             break;

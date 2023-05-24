@@ -6,11 +6,11 @@
 class AddRecruitment
 {
 public:
-    Recruitment * Create_Recruitment(CompanyMember *X, char a[], int b, char c[]);
+    Recruitment * Create_Recruitment(CompanyMember* X, char a[], int b, char c[]);
 };
 
 class SearchRecruitment
 {
 public:
-    void Search_Recruitments();
+    vector<Recruitment*> Search_Recruitments(CompanyMember* mem);
 };

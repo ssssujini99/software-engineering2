@@ -9,7 +9,7 @@ Recruitment * AddRecruitment::Create_Recruitment(CompanyMember *X, char a[], int
 	return recruitment;
 }
 
-void SearchRecruitment::Search_Recruitments()
+vector<Recruitment*> SearchRecruitment::Search_Recruitments(CompanyMember * mem)
 {
-
+	return mem->Get_RecruitmentList();
 }

@@ -13,6 +13,6 @@ public:
 class SearchRecruitmentUI
 {
 public:
-    void Search_Recruitments(FILE* input_File, FILE* output_File, CompanyMember* mem);
+    void Search_Recruitments(FILE * output_File, CompanyMember* mem);
 
 };

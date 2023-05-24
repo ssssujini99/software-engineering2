@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 #include "Recruitment.h"
 
 #define MAX_STRING 32
@@ -13,8 +14,7 @@ private:
 	char ID[MAX_STRING];
 	char password[MAX_STRING];
 
-	int num_Recruitment = 0; // 채용 정보 개수 및 인덱스 확인용
-	Recruitment * recuruitments[10]; // 채용 정보 저장
+	vector<Recruitment*> recruitment_List; // 채용 정보 저장
 
 public:
 	// 생성자
@@ -41,6 +41,6 @@ public:
 
 	// 채용 정보 추가
 	Recruitment * Add_Recruitment(char work[], int number, char deadline[]);
-	Recruitment* Get_RecruitmentList();
+	vector<Recruitment*> Get_RecruitmentList();
 
 };

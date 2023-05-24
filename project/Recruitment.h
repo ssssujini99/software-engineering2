@@ -12,7 +12,6 @@ private:
 	int number;
 	char deadline[MAX_STRING];
 
-
 public:
 	// »ý¼ºÀÚ
 	Recruitment(char _companyName[MAX_STRING], char _work[MAX_STRING], int _number, char _deadline[MAX_STRING])
