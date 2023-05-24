@@ -151,9 +151,30 @@ void DoTask()
             break;
 
         case 4:
+            switch (menu_level_2)
+            {
+                //채용정보 검색
+            case 1:
+                SearchRecruitmentInfoUI searchRecruitmentUI;
+                searchRecruitmentUI.selectCompany(in_fp, out_fp, Members);
+
+            }
             break;
 
         case 5:
+            switch (menu_level_2) {
+            
+            case 1:
+                //채용 or 지원 정보 통계
+                if (currentMember.getType()) {
+                    StatisticRecruitmentInfoUI statisticRecruitmentInfoUI;
+                    statisticRecruitmentInfoUI.recruitmentStatistic(out_fp, currentMember);
+                }
+                else {
+
+                }
+
+            }
             break;
 
         case 6:
