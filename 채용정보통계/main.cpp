@@ -10,7 +10,7 @@ case 5:
 
         //채용 or 지원 정보 통계
 
-        if (1) { //currentMember->getType() // 채용정보 통계
+        if (Member->getType()) {  // 채용정보 통계  getType==1이면 회사회원
             StatisticRecruitmentInfoUI statisticRecruitmentInfoUI;
             statisticRecruitmentInfoUI.recruitmentStatistic(out_fp, currentMember);
         }
