@@ -1,0 +1,26 @@
+1.1. 회원가입
+> hankook 3456 hk pwd1
+1.1. 회원가입
+> hane 15232 han pswd2
+2.1. 로그인
+> han pswd2
+3.1. 채용 정보 등록
+> accounting 2 2023/05/26
+
+3.1. 채용 정보 등록
+> accounting 3 2023/01/15
+
+3.1. 채용 정보 등록
+> frontend 2 2024/01/11
+
+3.2. 등록된 채용 정보 조회
+> accounting 2 2023/05/26
+> accounting 3 2023/01/15
+> frontend 2 2024/01/11
+
+4.1. 채용 정보 검색
+> hane 15232 accounting 2 2023/05/26
+> hane 15232 accounting 3 2023/01/15
+> hane 15232 frontend 2 2024/01/11
+2.2. 로그아웃
+> han
