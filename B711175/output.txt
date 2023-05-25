@@ -1,0 +1,106 @@
+1.1. 회원가입
+> 1 ankoo 3456 hk pwd1
+
+1.1. 회원가입
+> 1 zaaa 12351 ge pwd2
+
+2.1. 로그인
+> hk pwd1
+
+3.1. 채용 정보 등록
+> accounting 2 2023/05/26
+
+3.2. 등록된 채용 정보 조회
+> accounting 2 2023/05/26
+
+2.2. 로그아웃
+> hk
+
+2.1. 로그인
+> ge pwd2
+
+3.1. 채용 정보 등록
+> accounting 3 2023/07/26
+
+3.2. 등록된 채용 정보 조회
+> accounting 3 2023/07/26
+
+2.2. 로그아웃
+> ge
+
+1.1. 회원가입
+> 2 hong 98765 hn pwd3
+
+2.1. 로그인
+> hn pwd3
+
+4.1. 채용 정보 검색
+> ankoo 3456 accounting 2 2023/05/26
+
+4.2. 채용 지원
+> zaaa 12351 accounting
+
+4.2. 채용 지원
+> ankoo 3456 accounting
+
+4.3. 지원 정보 조회
+> ankoo 3456 accounting 2 2023/05/26
+> zaaa 12351 accounting 3 2023/07/26
+
+5.1. 지원 정보 통계(일반 회원)
+> accounting 2
+
+2.2. 로그아웃
+> hn
+
+1.1. 회원가입
+> 2 a 123 as pwd4
+
+2.1. 로그인
+> as pwd4
+
+4.2. 채용 지원
+> ankoo 3456 accounting
+
+4.3. 지원 정보 조회
+> ankoo 3456 accounting 2 2023/05/26
+
+5.1. 지원 정보 통계(일반 회원)
+> accounting 1
+
+2.2. 로그아웃
+> as
+
+2.1. 로그인
+> hk pwd1
+
+5.1. 지원 정보 통계(회사 회원)
+> accounting 2
+
+2.2. 로그아웃
+> hk
+
+2.1. 로그인
+> hn pwd3
+
+4.4. 지원 취소
+> ankoo 3456 accounting
+
+4.3. 지원 정보 조회
+> zaaa 12351 accounting 3 2023/07/26
+
+5.1. 지원 정보 통계(일반 회원)
+> accounting 1
+
+2.2. 로그아웃
+> hn
+
+2.1. 로그인
+> hk pwd1
+
+5.1. 지원 정보 통계(회사 회원)
+> accounting 1
+
+2.2. 로그아웃
+> hk
+
