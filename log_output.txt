@@ -1,0 +1,32 @@
+[수지니] Fri May 26 07:27:39 2023 +0900 Merge pull request #3 from ssssujini99/aaab248 05fb6da
+[수지니] Fri May 26 07:27:25 2023 +0900 [fix] : 충돌 해결 48f03ce
+[수지니] Fri May 26 07:26:00 2023 +0900 [fix] : 충돌 해결 5e1e3b5
+[“aaab248”] Fri May 26 04:38:29 2023 +0900 삭제 3560b8f
+[“aaab248”] Fri May 26 04:37:21 2023 +0900 전체 코드 구현 5e91398
+[chaelin2] Fri May 26 02:02:08 2023 +0900 Merge pull request #2 from ssssujini99/Kochaelin 05dbcbf
+[KoChaeLin] Fri May 26 01:59:31 2023 +0900 채용정보통계 수정 10ae76e
+[chaelin2] Fri May 26 01:11:17 2023 +0900 chaelin 84ad200
+[“aaab248”] Thu May 25 21:51:40 2023 +0900 코드 합치기 a6cfb43
+[“aaab248”] Thu May 25 11:46:15 2023 +0900 채용 정보 검색 추가 2400e67
+[수지니] Thu May 25 00:12:12 2023 +0900 update f26fc15
+[수지니] Thu May 25 00:07:57 2023 +0900 Create CompanyMember.cpp 0bf04c6
+[수지니] Wed May 24 19:05:22 2023 +0900 Member.h 791359a
+[“aaab248”] Wed May 24 18:32:38 2023 +0900 코드 수정 베열 -> 벡터 fed6f5f
+[chaelin2] Wed May 24 17:44:28 2023 +0900 Add files via upload 7735fb3
+[수지니] Wed May 24 17:26:46 2023 +0900 GeneralMember.cpp 9b7f4bb
+[수지니] Wed May 24 17:26:29 2023 +0900 GeneralMember.h 0545988
+[수지니] Wed May 24 17:26:04 2023 +0900 CompanyMember.cpp c66f729
+[수지니] Wed May 24 17:25:40 2023 +0900 CompanyMember.h 38b6183
+[수지니] Wed May 24 17:25:14 2023 +0900 Member.cpp f6332fd
+[수지니] Wed May 24 17:24:40 2023 +0900 Member.h 2be1294
+[“aaab248”] Wed May 24 17:20:47 2023 +0900 aa 9d82cf3
+[“aaab248”] Mon May 22 12:12:04 2023 +0900 Delete a.txt a96bb60
+[“aaab248”] Mon May 22 12:10:15 2023 +0900 Create a.txt b90d6bf
+[HaRokJang] Sun May 21 18:19:00 2023 +0900 Update README.md 88338de
+[수지니] Sun May 21 17:44:49 2023 +0900 [docs] : markdown 파일 추가 30f49da
+[수지니] Sun May 21 17:43:57 2023 +0900 [delete] : 디렉토리 변경 baabe86
+[수지니] Sun May 21 17:43:18 2023 +0900 [delete] : 디렉토리 변경 4512761
+[수지니] Sun May 21 17:43:06 2023 +0900 [delete] : 디렉토리 변경 76db7bd
+[수지니] Sun May 21 17:42:51 2023 +0900 [delete] : 디렉토리 변경 19f5c1d
+[수지니] Sun May 21 17:41:10 2023 +0900 [docs] : markdown 문서 추가 5c5c5e7
+[수지니] Sun May 21 17:20:03 2023 +0900 [settings] : 초기 세팅 02e0e3b
