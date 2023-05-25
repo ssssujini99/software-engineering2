@@ -8,25 +8,28 @@ class Recruitment
 {
 private:
 	char companyName[MAX_STRING];
+	char businessNum[MAX_STRING];
 	char work[MAX_STRING];
 	int number;
 	char deadline[MAX_STRING];
-	int applicantNum;
-
 
 public:
-	// »ý¼ºÀÚ
-	Recruitment(char _companyName[MAX_STRING], char _work[MAX_STRING], int _number, char _deadline[MAX_STRING])
+	// Â»Ã½Â¼ÂºÃ€Ãš
+	Recruitment(char _companyName[MAX_STRING], char _businessNum[MAX_STRING], char _work[MAX_STRING], int _number, char _deadline[MAX_STRING])
 	{
-		strncpy_s(companyName, _companyName, MAX_STRING - 1);
-		strncpy_s(work, _work, MAX_STRING - 1);
-		strncpy_s(deadline, _deadline, MAX_STRING - 1);
+		strcpy(companyName, _companyName);
+		strcpy(businessNum, _businessNum);
+		strcpy(companyName, _companyName);
+		strcpy(work, _work);
+		strcpy(deadline, _deadline);
 		number = _number;
-		applicantNum = 0;
 	}
 
 	const char* getCompanyName() const {
 		return companyName;
+	}
+	const char* getBusinessNum() const {
+		return businessNum;
 	}
 	const char* getWork() const {
 		return work;
@@ -36,8 +39,5 @@ public:
 	}
 	const int getNumber() const {
 		return number;
-	}
-	const int getApplicantNum()const {
-		return applicantNum;
 	}
 };

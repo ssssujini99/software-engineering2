@@ -1,14 +1,13 @@
-#ifndef GENERAL_MEMBER_H
-#define GENERAL_MEMBER_H
+#include<iostream>
+#include<vector>
 
 #include "Member.h"
+#include "Recruitment.h"
 
 class GeneralMember : public Member {
-    private:
-        string userName;
-        string identificationNumber;
-    public:
-        GeneralMember(string userName, string identificationNumber, string id, string password);
+private:
+    char userName[MAX_STRING];
+    char identificationNumber[MAX_STRING];
+public:
+    GeneralMember(char * userName, char * identificationNumber, char * id, char * password);
 };
-
-#endif
