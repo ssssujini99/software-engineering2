@@ -12,8 +12,8 @@
 // 상수 선언
 #define Max_User 100
 #define MAX_STRING 32
-#define INPUT_FILE_NAME "inputA.txt"
-#define OUTPUT_FILE_NAME "outputA.txt"
+#define INPUT_FILE_NAME "input.txt"
+#define OUTPUT_FILE_NAME "output.txt"
 
 JoinUI joinUI;
 LoginUI loginUI;
@@ -31,6 +31,7 @@ FILE* in_fp, * out_fp;
 vector<Member*> memberList;
 Member* member;
 
+// 로그인한 회원 저장
 GeneralMember* generalMember;
 CompanyMember* companyMember;
 
@@ -48,8 +49,6 @@ int main()
 
     return 0;
 }
-
-
 
 void DoTask()
 {
@@ -86,7 +85,7 @@ void DoTask()
             switch (menu_level_2)
             {
                 case 1:
-                    // 로그인 ( 타입에 따라 회사, 일반 분리 )
+                    // 2.1. 로그인 ( 타입에 따라 회사, 일반 분리 )
                     member = loginUI.startInterface(in_fp, out_fp, memberList);
                     if (member->getType() == 1)
                         companyMember = dynamic_cast<CompanyMember*>(member);
@@ -95,7 +94,7 @@ void DoTask()
                     break;
 
                 case 2:
-                    // 로그아웃
+                    // 2.2. 로그아웃
                     logoutUI.startInterface(out_fp, member, memberList);
                     companyMember = NULL;
                     generalMember = NULL;
@@ -106,13 +105,13 @@ void DoTask()
         case 3:
             switch (menu_level_2)
             {
-                // 3.1 채용 정보 등록
+                // 3.1. 채용 정보 등록
             case 1:     
                 AddRecruitmetnUI _add_RecruitmentUI;
                 _add_RecruitmentUI.Typing_New_Recruitment(in_fp, out_fp, companyMember);
                 break;
 
-                // 3.2 등록된 채용 정보 조회
+                // 3.2. 등록된 채용 정보 조회
             case 2:
                 
                 CheckRecruitmentUI _check_RecruitmentUI;
@@ -131,14 +130,22 @@ void DoTask()
                 searchRecruitmentUI.selectCompany(in_fp, out_fp, memberList);
                 break;
 
-                // 채용 지원
-            case 2:
+                // 4.2. 채용 지원
+            case 2: 
+                ApplyUI applyUI;
+                applyUI.clickApply(in_fp, out_fp, memberList, generalMember);
                 break;
-                // 지원 정보 검색
+
+                // 4.3. 지원 정보 검색
             case 3:
+                SearchApplicationUI searchApplicationUI;
+                searchApplicationUI.searchApply(out_fp, generalMember);
                 break;
-                // 지원 취소
+
+                // 4.4. 지원 취소
             case 4:
+                CancelApplicationUI cancelApplicationUI;
+                cancelApplicationUI.clickCancelApplication(in_fp, out_fp, generalMember);
                 break;
             }
             break;
@@ -147,13 +154,19 @@ void DoTask()
             switch (menu_level_2)
             {
             case 1:
-                //채용 or 지원 정보 통계
-                if (1) {  // 채용정보 통계  getType==1이면 회사회원
+                // 5.1. 채용 or 지원 정보 통계
+
+                // 회사회원의 채용 정보 통계
+                if (companyMember != NULL && generalMember == NULL) 
+                { 
                     StatisticRecruitmentInfoUI statisticRecruitmentInfoUI;
                     statisticRecruitmentInfoUI.recruitmentStatistic(out_fp, companyMember);
                 }
-                else {//일반회원의 지원정보 통계
-
+                // 일반회원의 지원정보 통계
+                else if(companyMember == NULL && generalMember != NULL)
+                {
+                    StatisticApplicationInfoUI statisticApplicationInfoUI;
+                    statisticApplicationInfoUI.applicationStatistic(out_fp, generalMember);
                 }
                 break;
             }
@@ -166,12 +179,8 @@ void DoTask()
                     is_program_exit = 1;
 
                     break;
-
             }
             break;
-
-
-
         }
     }
 }

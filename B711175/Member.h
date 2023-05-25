@@ -10,8 +10,8 @@ using namespace std;
 
 class Member {
 private:
-    char id[MAX_STRING];
-    char password[MAX_STRING];
+    char id[MAX_STRING]; // 아이디
+    char password[MAX_STRING]; // 패스워드
 
     int memberType; // 1 - 회사회원, 2 - 일반회원
 
