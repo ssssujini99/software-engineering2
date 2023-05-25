@@ -5,17 +5,17 @@ void AddRecruitmetnUI::Typing_New_Recruitment(FILE* input_File, FILE* output_Fil
 	AddRecruitment add_Recruitment;
 	Recruitment* recruitment;
 
-	// ÀÔ·Â °ª ÀúÀå º¯¼ö
+	// ì…ë ¥ ê°’ ì €ì¥ ë³€ìˆ˜
 	char work[MAX_STRING];
 	char deadline[MAX_STRING];
 	int num_Of_People;
 
-	// °ª ÀÔ·Â
+	// ê°’ ì…ë ¥
 	fscanf(input_File, "%s %d %s", work, &num_Of_People, deadline);
 
-	// ÀÔ·Â °ª Àü´Ş ¹× ³»¿ë Ãâ·Â
+	// ì…ë ¥ ê°’ ì „ë‹¬ ë° ë‚´ìš© ì¶œë ¥
 	recruitment = add_Recruitment.Create_Recruitment(mem, work, num_Of_People, deadline);
-	fprintf(output_File, "3.1. Ã¤¿ëÁ¤º¸µî·Ï\n");
+	fprintf(output_File, "3.1. ì±„ìš©ì •ë³´ë“±ë¡\n");
 	fprintf(output_File, "> %s %d %s", recruitment->getWork(), recruitment->getNumber(), recruitment->getDeadline());
 }
 
@@ -26,7 +26,7 @@ void SearchRecruitmentUI::Search_Recruitments(FILE* output_File, CompanyMember* 
 	vector<Recruitment*> v;
 	v = search_Recruitment.Search_Recruitments(mem);
 
-	fprintf(output_File, "3.2. Ã¤¿ëÁ¤º¸Á¶È¸\n");
+	fprintf(output_File, "3.2. ì±„ìš©ì •ë³´ì¡°íšŒ\n");
 	for (int i = 0; i < v.size(); i++)
 	{
 		fprintf(output_File, "> %s %d %s", v[i]->getWork(), v[i]->getNumber(), v[i]->getDeadline());
@@ -40,7 +40,7 @@ void SearchRecruitmentInfoUI::selectCompany(FILE* companyname, FILE* out_fp, vec
 	fscanf(companyname, "%s", searchCompanyName);
 	vector <Recruitment> v;
 
-	fprintf(out_fp, "4.1. Ã¤¿ë Á¤º¸ °Ë»ö\n");
+	fprintf(out_fp, "4.1. ì±„ìš© ì •ë³´ ê²€ìƒ‰\n");
 	for (int i = 0; i < memlist.size();i++) {
 		selectedRecruitment = SearchRecruitmentInfoPtr->showRecruitmentList(searchCompanyName);
 		fprintf(out_fp, "%s %s %s %d %s", companyname, selectedRecruitment->getWork(), selectedRecruitment->getNumber(), selectedRecruitment->getDeadline());
@@ -51,9 +51,9 @@ void SearchRecruitmentInfoUI::selectCompany(FILE* companyname, FILE* out_fp, vec
 }
 
 void StatisticRecruitmentInfoUI::recruitmentStatistic(FILE* out_fp, CompanyMember* mem) {
-	fprintf(out_fp, "5.1. Áö¿ø Á¤º¸ Åë°è\n");
+	fprintf(out_fp, "5.1. ì§€ì› ì •ë³´ í†µê³„\n");
 	for(int i=0;i<mem.)
-	fprintf(out_fp, "4.1. Ã¤¿ë Á¤º¸ °Ë»ö\n");
+	fprintf(out_fp, "4.1. ì±„ìš© ì •ë³´ ê²€ìƒ‰\n");
 
 }
 
