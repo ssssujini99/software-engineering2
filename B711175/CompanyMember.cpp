@@ -1,7 +1,7 @@
 #include "CompanyMember.h"
 
-CompanyMember::CompanyMember(char _companyName[MAX_STRING], char _businessNum[MAX_STRING],
-	char _ID[MAX_STRING], char _password[MAX_STRING], int _memberType) :Member(_ID, _password)
+CompanyMember::CompanyMember(const char _companyName[MAX_STRING], const char _businessNum[MAX_STRING],
+	const char _ID[MAX_STRING], const char _password[MAX_STRING], int _memberType) :Member(_ID, _password, _memberType)
 {
 	strcpy(companyName, _companyName);
 	strcpy(businessNum, _businessNum);

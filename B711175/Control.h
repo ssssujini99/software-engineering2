@@ -22,7 +22,7 @@ public:
 class SearchRecruitmentInfo
 {
 public:
-	vector<Recruitment*> showRecruitmentList(vector<CompanyMember*> cM_List, char* companyName);
+	vector<Recruitment*> showRecruitmentList(vector<Member*> cM_List, char* companyName);
 };
 
 // 지원 정보 통계 control 클래스

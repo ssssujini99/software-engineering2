@@ -1,3 +1,6 @@
+#ifndef COMPANYMEMBER_H
+#define COMPANYMEMBER_H
+
 #include<iostream>
 #include<vector>
 
@@ -16,8 +19,10 @@ private:
 
 public:
 	// CompanyMember 생성자
-	CompanyMember(char _companyName[MAX_STRING], char _businessNum[MAX_STRING],
-		char _ID[MAX_STRING], char _password[MAX_STRING], int _memberType);
+	CompanyMember(const char _companyName[MAX_STRING], const char _businessNum[MAX_STRING],
+		const char _ID[MAX_STRING], const char _password[MAX_STRING], int _memberType);
+
+	void Function() override {}
 
 	// 회사 이름 get
 	char* getCompanyName();
@@ -26,7 +31,9 @@ public:
 
 	// 채용 정보 추가
 	Recruitment * Add_Recruitment(char work[], int number, char deadline[]);
-
+	// 채용 정보 리스트 반환
 	vector<Recruitment*> Get_RecruitmentList();
 
 };
+
+#endif

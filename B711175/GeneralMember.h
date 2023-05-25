@@ -1,3 +1,6 @@
+#ifndef GENERALMEMBER_H
+#define GENERALMEMBER_H
+
 #include<iostream>
 #include<vector>
 
@@ -8,6 +11,11 @@ class GeneralMember : public Member {
 private:
     char userName[MAX_STRING];
     char identificationNumber[MAX_STRING];
+    int memberType;
 public:
-    GeneralMember(char * userName, char * identificationNumber, char * id, char * password);
+    GeneralMember(const char * userName,const char * identificationNumber,const char * id, const char * password, int memberType);
+
+    void Function() override {}
 };
+
+#endif

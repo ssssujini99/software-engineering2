@@ -31,7 +31,7 @@ void CheckRecruitmentUI::Check_Recruitments(FILE* output_File, CompanyMember* me
 	fprintf(output_File, "3.2. 등록된 채용 정보 조회\n");
 	for (int i = 0; i < v.size(); i++)
 	{
-		fprintf(output_File, "> %s %d %s\n", v[i]->getWork(), v[i]->getNumber(), v[i]->getDeadline());
+		fprintf(output_File, "> %s %d %s\n\n", v[i]->getWork(), v[i]->getNumber(), v[i]->getDeadline());
 	}
 	fprintf(output_File, "\n");
 
@@ -39,7 +39,7 @@ void CheckRecruitmentUI::Check_Recruitments(FILE* output_File, CompanyMember* me
 
 
 
-void SearchRecruitmentInfoUI::selectCompany(FILE* companyname, FILE* out_fp, vector<CompanyMember*> cM_List)
+void SearchRecruitmentInfoUI::selectCompany(FILE* companyname, FILE* out_fp, vector<Member*> M_List)
 {
 	SearchRecruitmentInfo SearchRecruitmentInfoPtr;
 	vector <Recruitment*> v;
@@ -47,12 +47,12 @@ void SearchRecruitmentInfoUI::selectCompany(FILE* companyname, FILE* out_fp, vec
 	char searchCompanyName[MAX_STRING];
 	fscanf(companyname, "%s", searchCompanyName);
 
-	v = SearchRecruitmentInfoPtr.showRecruitmentList(cM_List, searchCompanyName);
+	v = SearchRecruitmentInfoPtr.showRecruitmentList(M_List, searchCompanyName);
 
 	fprintf(out_fp, "4.1. 채용 정보 검색\n");
 	for (int i = 0; i < v.size(); i++)
 	{
-		fprintf(out_fp, "> %s %s %s %d %s\n",v[i]->getCompanyName(), v[i]->getBusinessNum(),
+		fprintf(out_fp, "> %s %s %s %d %s\n\n",v[i]->getCompanyName(), v[i]->getBusinessNum(),
 			v[i]->getWork(), v[i]->getNumber(), v[i]->getDeadline());
 
 	}

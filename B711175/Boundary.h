@@ -23,7 +23,7 @@ public:
 class SearchRecruitmentInfoUI
 {
 public:
-	void selectCompany(FILE* in_fp, FILE* out_fp, vector<CompanyMember*> cM_List);
+	void selectCompany(FILE* in_fp, FILE* out_fp, vector<Member*> M_List);
 };
 
 // 지원 정보 통계 boundry클래스

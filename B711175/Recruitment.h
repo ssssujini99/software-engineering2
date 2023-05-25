@@ -1,3 +1,6 @@
+#ifndef RECRUITMENT_H
+#define RECRUITMENT_H	
+
 #include<iostream>
 
 #define MAX_STRING 32
@@ -41,3 +44,4 @@ public:
 		return number;
 	}
 };
+#endif

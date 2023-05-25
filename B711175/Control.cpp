@@ -16,14 +16,22 @@ vector<Recruitment*> CheckRecruitment::Check_Recruitments(CompanyMember * mem)
 
 
 
-vector<Recruitment*> SearchRecruitmentInfo::showRecruitmentList(vector<CompanyMember*> cM_List, char* companyname)
+vector<Recruitment*> SearchRecruitmentInfo::showRecruitmentList(vector<Member*> M_List, char* companyname)
 {
-	for (int i = 0; i < cM_List.size(); i++)
+	CompanyMember* cM;
+
+	for (int i = 0; i < M_List.size(); i++)
 	{
-		if (strcmp(cM_List[i]->getCompanyName(), companyname))
+		if (M_List[i]->getType() == 1)
 		{
-			return cM_List[i]->Get_RecruitmentList();
+			cM = dynamic_cast<CompanyMember*>(M_List[i]);
+
+			if (strcmp(cM->getCompanyName(), companyname) == 0)
+			{
+				return cM->Get_RecruitmentList();
+			}
 		}
+
 	}
 }
 
